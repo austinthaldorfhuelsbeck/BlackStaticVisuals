@@ -1,0 +1,188 @@
+/* --- Basic text formatting / styling --- */
+
+h1 {
+  color: #fff;
+  font-size: 48px;
+  font-family: "Archivo Black", Archivo, "Montserrat Black", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2, li {
+  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+h2 {
+  color: #555;
+  font-size: 22px;
+}
+
+/* --- Header & Nav --- */
+
+header {
+  position: relative;
+  background: #fff;
+}
+
+header h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li:last-child a {
+  /* Removes the margin to the right of the last anchor tag 
+     so that the nav appears centered. */
+  margin-right: 0;
+}
+
+/* ---   Footer Parallax Effect:    ---
+   --- Sets position to fixed, and  ---
+   --- z-index to neg (sits behind) ---
+   ---   and sets height at 250px   ---*/
+
+footer {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url(https://d2f8l4t0zpiyim.cloudfront.net/000_clients/1290796/file/1290796lsavHdw7.jpg)
+}
+
+/* --- (...Footer Parallax Effect, con't) --- 
+   --- Sets main page content as relative ---
+   --- and "peels back" the bottom by 250 ---*/
+
+main {
+  position: relative;
+  margin-bottom: 250px;
+  background: #fff;
+}
+
+/* --- Page Content Sections --- */
+
+#index {
+  padding: 10%;
+}
+
+#music-videos {
+
+}
+
+#about {
+
+}
+
+#contact {
+
+}
+
+/* --- Flex Groups & Items --- */
+
+#videoDiv {
+  width: 100%;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+#bannerVideo {
+  width: 100%;
+  height: auto;
+}
+
+#bannerText {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+
+/* --- Flex (Desktop) --- */
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    margin: 0;
+    text-align: right;
+    padding: 20px;
+  }
+
+  section,
+  li {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+}
+
+/* --- Custom Flex Classes --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-group {
+  flex-direction: row;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+  align-items: center;
+}
+
+.item-double {
+  flex: 2;
+}
+
+.align-right {
+  align-self: flex-end;
+}
+
+/* --- Customizing Font Awesome --- */
+
+.icon {
+  padding: 10px;
+  color: #fff;
+}
+
+/* --- Pseudo-classes for links --- */
+a:link    { color: #000; text-decoration: none; }
+a:visited { color: #000; }
+a:hover   { color: #454545; }
+a:active  { color: #454545; }
