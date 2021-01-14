@@ -1,3 +1,8 @@
+/* --- This just seems like a good idea -- */
+img {
+  width: 100%;
+}
+
 /* --- Basic text formatting / styling --- */
 
 h1 {
@@ -9,7 +14,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-h2, li {
+h2, h3, li {
   font-size: 12px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   text-transform: uppercase;
@@ -20,6 +25,14 @@ h2, li {
 h2 {
   color: #555;
   font-size: 22px;
+}
+
+p {
+  font-size: 13px;
+  font-family: Raleway, Calibri, sans-serif;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  font-weight: normal;
 }
 
 /* --- Header & Nav --- */
@@ -80,16 +93,14 @@ main {
 
 /* --- Page Content Sections --- */
 
-#index {
+#index,
+#videos {
   padding: 10%;
 }
 
-#music-videos {
-
-}
-
 #about {
-
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 
 #contact {
@@ -122,31 +133,6 @@ main {
   height: 100%;
 }
 
-/* --- Flex (Desktop) --- */
-
-@media all and (min-width: 600px) {
-  header {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  header h1 {
-    margin: 0;
-    text-align: right;
-    padding: 20px;
-  }
-
-  section,
-  li {
-    padding: 0 10%;
-  }
-
-  .group {
-    flex-direction: row;
-  }
-}
-
 /* --- Custom Flex Classes --- */
 
 .group {
@@ -172,6 +158,36 @@ main {
 
 .align-right {
   align-self: flex-end;
+  text-align: right;
+}
+
+.align-center {
+  align-self: center;
+  text-align: center;
+}
+
+/* --- Flex (Desktop) --- */
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    margin: 0;
+    text-align: right;
+    padding: 20px;
+  }
+
+  li {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
 }
 
 /* --- Customizing Font Awesome --- */
