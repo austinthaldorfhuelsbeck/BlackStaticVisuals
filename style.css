@@ -14,7 +14,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-h2, h3, li {
+h2, h3, li, form button {
   font-size: 12px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   text-transform: uppercase;
@@ -31,7 +31,10 @@ li {
     padding: 10px;
 }
 
-p {
+p,
+form label,
+form input,
+form textarea {
   font-size: 13px;
   font-family: Raleway, Calibri, sans-serif;
   line-height: 22px;
@@ -178,6 +181,29 @@ section { padding: 10%; }
   h1 { font-size: 48px; }
 
   .group { flex-direction: row; }
+}
+
+/* --- Contact Form --- */
+form input,
+form textarea { width: 50%; }
+
+form label{
+  display: block;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+form input[type="text"],
+form textarea { margin-bottom: 20px; }
+
+form textarea { height: 4.75rem; }
+
+form button {
+  padding: 15px 30px;
+  min-width: 100px;
+  border-radius: 3px;
+  border: 1px solid;
+  font-size: 14px;
 }
 
 /* --- Customizing Font Awesome --- */
